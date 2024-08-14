@@ -1,0 +1,131 @@
+      body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent body from scrolling */
+        }
+
+        .container {
+            background-color: lightsteelblue;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: lightsteelblue;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+        .nav {
+            display: flex;
+            flex: 2;
+            justify-content: center;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav li {
+            padding: 0 10px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .nav a.active {
+            background-color: red;
+            color: white;
+        }
+
+        .nav a:hover {
+            background-color: #999;
+            color: white;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .profile div {
+            color: red;
+            font-size: 14px;
+        }
+
+        .contents {
+            display: flex;
+            flex: 1;
+        }
+
+        .chats, .recents {
+            overflow-y: auto; 
+        }
+
+        .chats {
+            background-color: lightgray;
+            flex: 1.2; 
+            min-width: 250px;
+            border: 1px solid black;
+            border-radius: 1px;
+            text-align: center;
+        }
+
+        .recents {
+            background-color: lightgrey;
+            flex: 3;
+            border: 1px solid black;
+            border-radius: 1px;
+            display: flex;
+            flex-direction: column;
+        }
+        .recents-header {
+            background-color: gray;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .recents-header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        @media screen and (max-width: 650px) {
+            body {
+                background-color: red;
+            }
+            .chats {
+                flex: 1;
+            }
+            .recents {
+                display: none;
+            }
+        }
